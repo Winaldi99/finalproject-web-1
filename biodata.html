@@ -30,13 +30,147 @@
         </ul>
     </nav>
 
-    <main>
-        
+    <main class="bg-gray-100 my-20 flex items-center justify-center p-4">
+        <div class="container mx-auto max-w-4xl bg-white shadow-lg rounded-xl overflow-hidden">
+            <!-- Header Section -->
+            <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6">
+                <div class="flex items-center space-x-6">
+                    <!-- Profile Picture -->
+                    <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="img/img/self.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Personal Information -->
+                    <div>
+                        <h1 class="text-3xl font-bold mb-2">Winaldi Tamba</h1>
+                        <div class="space-y-1">
+                            <p class="flex items-center">
+                                <i class="fas fa-id-card mr-2"></i>
+                                <span>NIM: 2381030</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-university mr-2"></i>
+                                <span>Faculty: Information Technology</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Main Content -->
+            <div class="p-6 grid md:grid-cols-2 gap-6">
+                <!-- Left Column -->
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">
+                        About Me
+                    </h2>
+                    
+                    <!-- Hobbies Section -->
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-700 mb-3">
+                            <i class="fas fa-list mr-2"></i>Hobbies
+                        </h3>
+                        <ul class="space-y-2 pl-4">
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>Listening Music
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>Football
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>Watching Cartoon / Film
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!-- Skills Section -->
+                    <div>
+                        <h3 class="text-xl font-medium text-gray-700 mb-3">
+                            <i class="fas fa-skills mr-2 text-green-500"></i>Skills
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Guitar</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Coding Beginner</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Column - Testimonial -->
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">
+                        Testimonial
+                    </h2>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-inner">
+                        <blockquote class="italic text-gray-600 mb-4">
+                            The experiences I got in class were quite numerous and enjoyable. trying to understand several programming languages ​
+                            and it is quite challenging to learn. One of the valuable things I learned was how to connect the coding repository with our own domain
+                        </blockquote>
+                        
+                        <div class="flex items-center">
+                            <div>
+                                <p class="font-semibold text-gray-800">Winaldi</p>
+                                <p class="text-sm text-gray-600">Undegraduate Student | Universitas Advent Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer -->
+            <div class="bg-gray-100 p-4 text-center text-gray-600">
+                <p>© 2024 Student Profile. All rights reserved.</p>
+            </div>
+        </div>
     </main>
 
-    <footer >
-      
+    <footer class="bg-white">
+        <div class="flex flex-col place-content-center text-center border-b-2 pb-10 mt-5 mx-5 md:flex-row md:mx-80 md:text-left">
+            <div class="basis-1/5">
+                <h3 class="font-semibold my-10 mb-5">Produk</h3>
+                <ul class="text-sm text-slate-700">
+                    <li class="my-2"><a href="#">Balsem</a></li>
+                    <li class="my-2"><a href="#">Minyak Angin</a></li>
+                    <li class="my-2"><a href="#">Natural Oil</a></li>
+                    <li class="my-2"><a href="#">Minyak Gosok</a></li>
+                    <li class="my-2"><a href="#">Others</a></li>
+                    <li class="my-2"><a href="#">Krim</a></li>
+                </ul>
+            </div>
+            <div class="basis-1/5">
+                <h3 class="font-semibold my-10 mb-5">Berita</h3>
+                <ul class="text-sm text-slate-700">
+                    <li class="my-2"><a href="#">Aktivitas</a></li>
+                    <li class="my-2"><a href="#">Artikel</a></li>
+                    <li class="my-2"><a href="#">Tips</a></li>
+                </ul>
+            </div>
+            <div class="basis-1/4">
+                <h3 class="font-semibold my-10 mb-5">Tentang Perusahaan</h3>
+                <ul class="text-sm text-slate-700">
+                    <li class="my-2"><a href="#">Profil</a></li>
+                    <li class="my-2"><a href="#">Karir</a></li>
+                    <li class="my-2"><a href="#">Hubungi kami</a></li>
+                </ul>
+            </div>
+            <div class="basis-1/5">
+                <h3 class="font-semibold my-10 mb-5">Website</h3>
+                <ul class="text-sm text-slate-700">
+                    <li class="my-2 hover:underline"><a href="https://fti.unai.edu/" target="_blank">FTI UNAI</a></li>
+                    <li class="my-2 hover:underline"><a href="https://unai.edu/" target="_blank">UNAI EDU</a></li>
+                </ul>
+            </div>
+            <div class="basis-1/5">
+                <h3 class="font-semibold my-10 mb-5">Kontak</h3>
+                <p class="text-sm font-semibold text-slate-800">PT. BORDEN EAGLE INDONESIA</p>
+                <a class="text-sm text-gray-700 hover:underline" href="#">info@bordeneagle.com</a>
+                <p class="text-sm text-gray-700">Telp : +6221-50328000<br>Trembesi Tower Suites 9 Jl. Pahlawan <br> Seribu Lot VII A, CBD-BSD <br>Kota Tangerang Selatan Banten 15311 - <br> Indonesia</p>
+            </div>
+        </div>
+        <div class="flex flex-col text-center text-sm my-10 md:flex-row md:text-left md:place-content-between md:mx-80">
+            <p>Website ini dimiliki dan dikelola oleh PT. Borden Eagle Indonesia.</p>
+            <p>© Hak Cipta 2017 - 2024</p>
+        </div>
     </footer>
-
 </body>
 </html>
