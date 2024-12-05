@@ -13,8 +13,11 @@
 
 <body class="font-['Poppins']">
     <header class="flex flex-row place-content-between items-center my-5 mx-5   md:mx-10 md:my-5">
-        <div class="flex flex-row gap-4 block md:hidden">
-            <i class="fa-solid fa-bars flex flex-row gap-3 text-lime-500 text-3xl"></i>
+        
+        <div class="md:hidden">
+            <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-lime-500 text-xl"></i>
+            </button>
         </div>
         <div class="hidden md:block">
             <div class="flex flex-row gap-4">
@@ -50,6 +53,26 @@
             <li class="text-white text-sm font-semibold py-5 px-3 hover:bg-lime-600 hover:duration-500"><a href="posts.html">ADDITIONAL</a></li>
             <li class="text-white text-sm font-semibold py-5 px-3 hover:bg-lime-600 hover:duration-500"><a href="freepage.html">FREE CONTENT</a></li>
         </ul>
+    </nav>
+
+    <nav class="block md:hidden bg-lime-500">
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-lime-600">HOME</a>
+                <a href="biodata.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-lime-600">BIODATA</a>
+                <a href="contact_us.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-lime-600">CONTACT US</a>
+                <a href="posts.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-lime-600">ADDITIONAL</a>
+                <a href="freepage.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-lime-600">FREE CONTENT</a>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </nav>
 
     <main class="bg-slate-100">
