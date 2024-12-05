@@ -65,11 +65,13 @@
     <main class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
         <div class="w-full max-w-xl bg-white shadow-md rounded-lg p-8">
             <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Student Registration Form</h2>
-            <form class="space-y-4">
+            <form class="space-y-4" id="registration">
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                     <input 
+                        id="fullName"
+                        name="fullName"
                         type="text" 
                         placeholder="Enter your full name" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -79,6 +81,8 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Student ID (NIM)</label>
                     <input 
+                        id="studentId"
+                        name="studentId"
                         type="text" 
                         placeholder="Enter your student ID" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -88,6 +92,8 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                     <input 
+                        id="email"
+                        name="email"
                         type="email" 
                         placeholder="Enter your email" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -97,6 +103,8 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Faculty/Major</label>
                     <select 
+                        id="faculty"
+                        name="faculty"
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                         <option value="">Select Faculty</option>
@@ -112,6 +120,9 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
                     <input 
+
+                        id="dob"
+                        name="dob"
                         type="date" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
@@ -124,7 +135,8 @@
                             <input 
                                 type="radio" 
                                 name="gender" 
-                                class="form-radio text-blue-500"
+                                value="male"
+                                class="form-radio text-blue-500 focus:ring-blue-500"
                             >
                             <span class="ml-2">Male</span>
                         </label>
@@ -132,7 +144,8 @@
                             <input 
                                 type="radio" 
                                 name="gender" 
-                                class="form-radio text-blue-500"
+                                value="female"
+                                class="form-radio text-blue-500 focus:ring-blue-500"
                             >
                             <span class="ml-2">Female</span>
                         </label>
@@ -142,6 +155,8 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
                     <textarea 
+                        id="address"
+                        name="address"
                         placeholder="Enter your address" 
                         rows="3" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -151,6 +166,8 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                     <input 
+                        id="phone"
+                        name="phone"
                         type="tel" 
                         placeholder="Enter your phone number" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -166,7 +183,45 @@
                     </button>
                 </div>
             </form>
-        </div>   
+        </div>
+        <script>
+            const form = document.getElementById('registration');
+        
+            form.addEventListener('submit', (event) => {
+              event.preventDefault();
+        
+              // Form Fields
+              const fullName = document.getElementById('fullName').value.trim();
+              const studentId = document.getElementById('studentId').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const faculty = document.getElementById('faculty').value;
+              const dob = document.getElementById('dob').value;
+              const gender = document.querySelector('input[name="gender"]:checked');
+              const address = document.getElementById('address').value.trim();
+              const phone = document.getElementById('phone').value.trim();
+        
+              // Validation
+              if (!fullName || !studentId || !email || !faculty || !dob || !gender || !address || !phone) {
+                alert('Please fill out all fields.');
+                return;
+              }
+        
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+              }
+        
+              const phonePattern = /^[0-9]{10,}$/;
+              if (!phonePattern.test(phone)) {
+                alert('Phone number must be numeric and at least 10 digits.');
+                return;
+              }
+        
+              alert('Form submitted successfully!');
+              form.reset();
+            });
+          </script>
     </main>
 
     <footer class="bg-white">
